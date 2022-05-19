@@ -32,7 +32,7 @@ MerakiCamera_to_WebexRoomKitMini = []
 with open('MerakiCameras_to_WebexRoomKitMini_Pairing.csv', 'r') as read_obj:
     csv_dict_reader = DictReader(read_obj)
     for row in csv_dict_reader:
-        row['Room_Name'] = row.pop('ï»¿Room_Name')
+        row['Room_Name'] = row.pop('Room_Name')
         MerakiCamera_to_WebexRoomKitMini.append(row)
 # note the use case is developed with only one patient room available, requires iterations if multiple rooms are listed in MerakiCameras_to_WebexRoomKitMini_Pairing.csv
 MERAKI_SN = MerakiCamera_to_WebexRoomKitMini[0]['Meraki_SN']

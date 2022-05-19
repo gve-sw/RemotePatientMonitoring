@@ -10,7 +10,7 @@
     <!-- <script src="../public/js/styleguide.js"></script> -->
 
     <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
-
+    <link rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
 
 </head>
 <body class="cui">
@@ -26,7 +26,7 @@
                     <div class="section">
                         <div class="panel panel--loose panel--raised base-margin-bottom" >
                             <h1 id="room"></h1>
-                            <div id="my-webex-widget">
+                            <div id="my-webex-widget" hidden style="height:80vh;"></div>
                             <img id="img" style="-webkit-user-select:none;margin:auto;" width="513" height="288" onerror="setInterval(reload_image, 2500)">
                             <br><br>
                             <button class="btn btn--large btn--success" id="call" onclick="calling();">Call into Room!</button>
@@ -90,6 +90,8 @@
               secondaryActivitiesFullWidth: false,
               composerActions: {"attachFiles":true}
             });
+
+            widgetEl.show()
         }
 
     </script>
